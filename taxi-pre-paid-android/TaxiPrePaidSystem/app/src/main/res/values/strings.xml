@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Taxi Pre Paid System</string>
+    <string name="text_wait">Please wait</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_error">Unknown error! Please try after some time</string>
+    <string name="logout_message">You will be logged out of the app</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="passenger_name">Passenger Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="destination">Destination</string>
+    <string name="book_taxi">Book Taxi</string>
+    <string name="close">Close</string>
+    <string name="vehicle_number">Vehicle number</string>
+    <string name="complete_trip">Complete Trip</string>
+    <string name="past_trips">Past Trips</string>
+    <string name="journey_cost">Journey cost</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_trip_otp">Enter trip OTP</string>
+    <string name="rupee">₹</string>
+    <string name="logout">Logout</string>
+    <string name="payout">Payout</string>
+    <string name="no_ongoing_trips">No ongoing trips</string>
+    <string name="no_completed_trips">No trips completed</string>
+    <string name="total_payout_till_date">Total payout till date</string>
+</resources>

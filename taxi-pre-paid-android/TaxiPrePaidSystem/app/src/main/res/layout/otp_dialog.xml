@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_trip_otp"
+        android:textAppearance="?textAppearanceBody1"
+        android:gravity="center"/>
+
+    <com.mukesh.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:OtpItemCount="6"
+        app:OtpLineColor="@color/colorPrimary"
+        app:OtpViewType="rectangle"
+        app:OtpItemWidth="40dp"
+        app:OtpItemHeight="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_normal"/>
+
+</LinearLayout>

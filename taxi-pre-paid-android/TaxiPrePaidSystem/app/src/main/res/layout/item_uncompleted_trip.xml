@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="uncompletedTrip"
+            type="com.basil.taxiprepaid.ui.driverhome.UncompletedTripDetails" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/passenger_name"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@{uncompletedTrip.passengerName}"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Manjit Singh" />
+
+        <TextView
+            android:id="@+id/destination"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?textAppearanceBody2"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passenger_name"
+            android:text="@{uncompletedTrip.destination}"
+            tools:text="--" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/destination"
+            android:text="@{uncompletedTrip.formatTime(uncompletedTrip.bookingTime)}"
+            tools:text="24 Jun, 2021, 9:30" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/call"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            app:icon="@drawable/ic_baseline_phone_24"
+            app:iconTint="@color/white"
+            app:iconSize="20dp"
+            app:iconGravity="textStart"
+            android:padding="0dp"
+            app:iconPadding="0dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintTop_toTopOf="@id/complete_trip"
+            app:layout_constraintBottom_toBottomOf="@id/complete_trip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TaxiPrePaidSystem.Button.Circle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            app:iconTint="@color/red"
+            app:iconSize="20dp"
+            app:iconGravity="textStart"
+            android:padding="0dp"
+            app:iconPadding="0dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            app:layout_constraintTop_toTopOf="@id/complete_trip"
+            app:layout_constraintBottom_toBottomOf="@id/complete_trip"
+            app:layout_constraintStart_toEndOf="@id/call"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TaxiPrePaidSystem.Button.Circle" />
+
+        <Button
+            android:id="@+id/complete_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_trip"
+            style="@style/Theme.TaxiPrePaidSystem.Button.Secondary"
+            android:layout_marginTop="@dimen/margin_mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
