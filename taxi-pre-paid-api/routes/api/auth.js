@@ -97,7 +97,7 @@ router.post('/user/signup', async (req, res, next) => {
                     res.statusCode = 200;
                     return res.status(200).json({status: -1, message: "Something went wrong"});
                 }
-                let sqlQuery = `INSERT INTO users (uid, vehicle_id, user_name, user_password, mobile) VALUES (?,?,?,?,?);`;
+                let sqlQuery = `INSERT INTO users (uid, user_id, user_name, user_password, mobile) VALUES (?,?,?,?,?);`;
                 let fieldsArray = [request.uid, request.vehicle_id, request.name, hashedPassword, request.mobile];
                 tempConnection.query(sqlQuery, fieldsArray, (error, results, fields) => {
                     tempConnection.release();
